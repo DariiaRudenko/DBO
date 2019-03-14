@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title>DBO</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="block">
+        <h1><b>Моя выписка</b></h1>
+        <h1 id = "Ivan">&#9785 Иван Иванов</h1>
+        <hr width=100% color="black" size="2">
+        <div class="block1">
+            <label><input  name = "column" type="checkbox" value="0" id="date_toogle" onClick="toogleHideColumn(this);" checked>Дата</input></label> 
+            <label><input  name = "column" type="checkbox" value="1" id="time_toogle" onClick="toogleHideColumn(this);" checked> Время</input></label>
+            <label><input  name = "column" type="checkbox" value="2" id="type_toogle" onClick="toogleHideColumn(this);" checked> Тип</input></label>
+            <label><input  name = "column" type="checkbox" value="3" id="income_toogle" onClick="toogleHideColumn(this);" checked> Приход</input></label>
+            <label><input  name = "column" type="checkbox" value="4" id="outcome_toogle" onClick="toogleHideColumn(this);" checked> Расход</input></label>
+        </div>
+        <p class="group">
+            <label>Группировка</label>
+            <select name="select" id="sortlist">
+                <option selected value="s1">Без группировки</option>
+                <option id = "date" value="s2">По дате</option>
+                <option value="s3">По времени</option>
+                <option value="s3">По типу</option>
+                <option value="s3">По приходу</option>
+                <option value="s3">По расходу</option>
+            </select>
+        </p>
+        <div class="container">
+            <div id="myTable" class="table-wrapper"></div>
+        </div>
+        <p class="footer">&#169 Мой банк</p>
+    </div>
+    <script src="data.js"></script>
+    <script src="table-controller.js"></script>
+</body>
+
+</html>
